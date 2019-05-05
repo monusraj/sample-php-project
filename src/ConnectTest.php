@@ -1,10 +1,5 @@
 <?php
-use PHPUnit\Framework\TestCase;
-
-// extend using TestCase instead PHPUnit_Framework_TestCase
-class SampleTest extends TestCase {
-
-}
+require_once ('PHPUnit/Framework/TestCase.php');
 class RemoteConnectTest extends PHPUnit_Framework_TestCase
 {
   public function setUp(){ }
