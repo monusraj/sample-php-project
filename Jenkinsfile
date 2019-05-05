@@ -17,7 +17,8 @@ pipeline {
              expression {env.BRANCH_NAME == 'master'}
          }                     
             steps {
-                                   
+              sshagent (credentials: ['40956f23-772d-4edf-86a9-8aaa54a3ba2b'])                        
+                {                     
                 
                 script {
                    
@@ -33,6 +34,8 @@ pipeline {
                                 -m "Build: ${env.BUILD_NUMBER}"
                             git push --tags
                         """
+                }
+         
                 }
             }  
     }
