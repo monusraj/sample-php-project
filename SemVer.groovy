@@ -1,4 +1,6 @@
- def getTagversion (String oldtagVersion)
+import jenkins.model.*
+jenkins = Jenkins.instance
+def getTagversion (String oldtagVersion)
 {
     oldtagVersion = oldtagVersion.substring(1)
     println oldtagVersion
