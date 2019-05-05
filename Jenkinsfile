@@ -39,7 +39,7 @@ pipeline {
                             git push --tags
                         """
                 }
-                                 
+            }                     
   }
 }
 
