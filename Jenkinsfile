@@ -14,7 +14,7 @@ pipeline {
     stage('PHPUnit Test') {
       steps {
         echo 'Running PHPUnit...'
-        sh '/bin/phpunit ${WORKSPACE}/src'
+        sh '/usr/local/bin/phpunit ${WORKSPACE}/src'
       }
     }
     stage("create a new tag") {
@@ -25,7 +25,7 @@ pipeline {
                                    
                 
                 script {
-                   
+                   /usr/local/bin/phpunit
                         def tag = sh(returnStdout: true, script: "git tag | tail -1").trim()
                         println tag
                         def semVerLib = load 'SemVer.groovy'
